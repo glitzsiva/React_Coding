@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import CounterApp from './components/CounterApp';
 
-function App() {
+const  App =()=> {
+
+  const [value , setValue ] = useState(0); // default value 0 
+  const [ count, setCount] = useState(1);
+
+  const onClickButton =()=>{
+    setValue(5)
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div> Value : {value} </div> 
+      <button onClick={onClickButton}>Set Value </button>
+      <CounterApp  count={count} setCount={setCount} />
+
     </div>
   );
 }
 
 export default App;
+
+const counter =(count) =>{
+
+}
+
+
+// const UseState = (value)=>{
+//   var val =0;
+//   const setValue =()=>{
+//     val = value;
+//   }
+
+//   return [val, setValue]
+// }
+
