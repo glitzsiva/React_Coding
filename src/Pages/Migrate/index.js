@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "../../components/Sidebar dummy";
+import Sidebar from "../../components/Sidebar";
 
 
 const Migrate =()=>{
