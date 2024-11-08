@@ -1,40 +1,26 @@
 import './App.css';
 import { useState } from 'react';
 import CounterApp from './components/CounterApp';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Migrate from './Pages/Migrate';
+import DiscoverAndAsses from './Pages/DiscoverAndAsses';
 
 const  App =()=> {
-
-  const [value , setValue ] = useState(0); // default value 0 
-  const [ count, setCount] = useState(1);
-
-  const onClickButton =()=>{
-    setValue(5)
-  }
 
 
   return (
     <div className="App">
-      <div> Value : {value} </div> 
-      <button onClick={onClickButton}>Set Value </button>
-      <CounterApp  count={count} setCount={setCount} />
-
+      <BrowserRouter>
+        <Routes>
+          <Route path="/discover" element={<DiscoverAndAsses/>} />
+          <Route path="/migrate" element={<Migrate />}/>
+        </Routes>
+    </BrowserRouter>
     </div>
   );
 }
 
 export default App;
 
-const counter =(count) =>{
-
-}
-
-
-// const UseState = (value)=>{
-//   var val =0;
-//   const setValue =()=>{
-//     val = value;
-//   }
-
-//   return [val, setValue]
-// }
 

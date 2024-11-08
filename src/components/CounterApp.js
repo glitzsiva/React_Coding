@@ -12,7 +12,6 @@ const CounterApp =(prop)=>{
     return(
     <div >
         <h1>Counter App</h1>
-
         <div> Count :{prop.count}</div>
         <button onClick={ ()=>{prop.setCount(prop.count+1) } } >Increase Count</button>
         <button onClick={ ()=>{prop.setCount(prop.count-1) } } >decrease Count</button>
