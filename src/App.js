@@ -1,10 +1,10 @@
 import './App.css';
-import { useState } from 'react';
-import CounterApp from './components/CounterApp';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Migrate from './Pages/Migrate';
 import DiscoverAndAsses from './Pages/DiscoverAndAsses';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const  App =()=> {
 

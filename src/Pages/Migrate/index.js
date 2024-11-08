@@ -1,15 +1,19 @@
 import React from "react";
+import Sidebar from "../../components/Sidebar dummy";
 
 
 const Migrate =()=>{
 
 
     return(
-        <div>
-            Migrate
+        <div className="d-flex">   
+            <Sidebar/>   
+           <div className="col-10 bg-primary"> Migrate</div> 
         </div>
     )
 }
 
 
 export default Migrate
+
+
